@@ -1,13 +1,13 @@
 # Draftling Web Flasher
 
-This branch hosts a static, dependency-free web page that flashes
+This repository hosts a static, dependency-free web page that flashes
 prebuilt [Draftling](https://github.com/clackups/draftling) firmware
 onto supported boards directly from the browser, using the
 [Web Serial API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API)
 and [esptool-js](https://github.com/espressif/esptool-js).
 
-It is unrelated to the firmware source tree on `main` — this branch
-exists only to be published via GitHub Pages.
+It is separate from the firmware source repository and is published
+via GitHub Pages at https://flasher.draftling.art/.
 
 ## Layout
 
@@ -80,7 +80,7 @@ covers:
    becomes the default) with its `tag`, flash mode/freq/size, and
    `parts` pointing at `firmware/<new-tag>/...`. Boards not part of
    this release keep their existing `releases` untouched.
-4. Commit and push to `_flasher` — GitHub Pages redeploys automatically.
+4. Commit and push to `main` — GitHub Pages redeploys automatically.
    A `firmware/<tag>/` directory can be removed once no board's
    `releases` references it any more.
 
