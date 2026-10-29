@@ -817,221 +817,23 @@
       "chipFamily": "ESP32-S3",
       "releases": [
         {
-          "tag": "v1.0.19-papermono-ble",
+          "tag": "v1.0.19-papermono-ble2",
           "flashMode": "dio",
           "flashFreq": "80m",
           "flashSize": "16MB",
           "defaultPackName": "Default (English, Ukrainian, German, French, Hebrew)",
           "parts": [
             {
-              "path": "firmware/v1.0.19-papermono-ble/draftling-m5stack_papermono-bootloader.bin",
+              "path": "firmware/v1.0.19-papermono-ble2/draftling-m5stack_papermono-bootloader.bin",
               "offset": "0x0"
             },
             {
-              "path": "firmware/v1.0.19-papermono-ble/draftling-m5stack_papermono-partition-table.bin",
+              "path": "firmware/v1.0.19-papermono-ble2/draftling-m5stack_papermono-partition-table.bin",
               "offset": "0x8000"
             },
             {
-              "path": "firmware/v1.0.19-papermono-ble/draftling-m5stack_papermono.bin",
+              "path": "firmware/v1.0.19-papermono-ble2/draftling-m5stack_papermono.bin",
               "offset": "0x10000"
-            }
-          ]
-        },
-        {
-          "tag": "v1.0.19-papermono-led",
-          "flashMode": "dio",
-          "flashFreq": "80m",
-          "flashSize": "16MB",
-          "defaultPackName": "Default (English, Ukrainian, German, French, Hebrew)",
-          "parts": [
-            {
-              "path": "firmware/v1.0.19-papermono-led/draftling-m5stack_papermono-bootloader.bin",
-              "offset": "0x0"
-            },
-            {
-              "path": "firmware/v1.0.19-papermono-led/draftling-m5stack_papermono-partition-table.bin",
-              "offset": "0x8000"
-            },
-            {
-              "path": "firmware/v1.0.19-papermono-led/draftling-m5stack_papermono.bin",
-              "offset": "0x10000"
-            }
-          ],
-          "languagePacks": [
-            {
-              "id": "vietnamese",
-              "name": "Vietnamese (English + Vietnamese Telex)",
-              "description": "Type Vietnamese with Telex: aa, dd, w, s/f/r/x/j for tones. Typing guide: https://github.com/clackups/draftling/blob/main/docs/language-packs.md",
-              "parts": [
-                {
-                  "path": "firmware/v1.0.19-papermono-led/draftling-m5stack_papermono-vietnamese-bootloader.bin",
-                  "offset": "0x0"
-                },
-                {
-                  "path": "firmware/v1.0.19-papermono-led/draftling-m5stack_papermono-vietnamese-partition-table.bin",
-                  "offset": "0x8000"
-                },
-                {
-                  "path": "firmware/v1.0.19-papermono-led/draftling-m5stack_papermono-vietnamese.bin",
-                  "offset": "0x10000"
-                }
-              ]
-            },
-            {
-              "id": "korean",
-              "name": "Korean (English + Korean 2-set Hangul)",
-              "description": "Dubeolsik layout; jamo are composed into Hangul syllables as you type. Typing guide: https://github.com/clackups/draftling/blob/main/docs/language-packs.md",
-              "parts": [
-                {
-                  "path": "firmware/v1.0.19-papermono-led/draftling-m5stack_papermono-korean-bootloader.bin",
-                  "offset": "0x0"
-                },
-                {
-                  "path": "firmware/v1.0.19-papermono-led/draftling-m5stack_papermono-korean-partition-table.bin",
-                  "offset": "0x8000"
-                },
-                {
-                  "path": "firmware/v1.0.19-papermono-led/draftling-m5stack_papermono-korean.bin",
-                  "offset": "0x10000"
-                }
-              ]
-            },
-            {
-              "id": "japanese",
-              "name": "Japanese (English + Japanese romaji/kana/kanji)",
-              "description": "Romaji become hiragana; Space converts to kanji, candidates in the status bar. Typing guide: https://github.com/clackups/draftling/blob/main/docs/language-packs.md",
-              "parts": [
-                {
-                  "path": "firmware/v1.0.19-papermono-led/draftling-m5stack_papermono-japanese-bootloader.bin",
-                  "offset": "0x0"
-                },
-                {
-                  "path": "firmware/v1.0.19-papermono-led/draftling-m5stack_papermono-japanese-partition-table.bin",
-                  "offset": "0x8000"
-                },
-                {
-                  "path": "firmware/v1.0.19-papermono-led/draftling-m5stack_papermono-japanese.bin",
-                  "offset": "0x10000"
-                }
-              ]
-            },
-            {
-              "id": "chinese",
-              "name": "Chinese (English + Simplified Chinese pinyin)",
-              "description": "Type pinyin; pick hanzi with Space or 1-9 from the status bar. Typing guide: https://github.com/clackups/draftling/blob/main/docs/language-packs.md",
-              "parts": [
-                {
-                  "path": "firmware/v1.0.19-papermono-led/draftling-m5stack_papermono-chinese-bootloader.bin",
-                  "offset": "0x0"
-                },
-                {
-                  "path": "firmware/v1.0.19-papermono-led/draftling-m5stack_papermono-chinese-partition-table.bin",
-                  "offset": "0x8000"
-                },
-                {
-                  "path": "firmware/v1.0.19-papermono-led/draftling-m5stack_papermono-chinese.bin",
-                  "offset": "0x10000"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "tag": "v1.0.19",
-          "flashMode": "dio",
-          "flashFreq": "80m",
-          "flashSize": "16MB",
-          "defaultPackName": "Default (English, Ukrainian, German, French, Hebrew)",
-          "parts": [
-            {
-              "path": "firmware/v1.0.19/draftling-m5stack_papermono-bootloader.bin",
-              "offset": "0x0"
-            },
-            {
-              "path": "firmware/v1.0.19/draftling-m5stack_papermono-partition-table.bin",
-              "offset": "0x8000"
-            },
-            {
-              "path": "firmware/v1.0.19/draftling-m5stack_papermono.bin",
-              "offset": "0x10000"
-            }
-          ],
-          "languagePacks": [
-            {
-              "id": "vietnamese",
-              "name": "Vietnamese (English + Vietnamese Telex)",
-              "description": "Type Vietnamese with Telex: aa, dd, w, s/f/r/x/j for tones. Typing guide: https://github.com/clackups/draftling/blob/main/docs/language-packs.md",
-              "parts": [
-                {
-                  "path": "firmware/v1.0.19/draftling-m5stack_papermono-vietnamese-bootloader.bin",
-                  "offset": "0x0"
-                },
-                {
-                  "path": "firmware/v1.0.19/draftling-m5stack_papermono-vietnamese-partition-table.bin",
-                  "offset": "0x8000"
-                },
-                {
-                  "path": "firmware/v1.0.19/draftling-m5stack_papermono-vietnamese.bin",
-                  "offset": "0x10000"
-                }
-              ]
-            },
-            {
-              "id": "korean",
-              "name": "Korean (English + Korean 2-set Hangul)",
-              "description": "Dubeolsik layout; jamo are composed into Hangul syllables as you type. Typing guide: https://github.com/clackups/draftling/blob/main/docs/language-packs.md",
-              "parts": [
-                {
-                  "path": "firmware/v1.0.19/draftling-m5stack_papermono-korean-bootloader.bin",
-                  "offset": "0x0"
-                },
-                {
-                  "path": "firmware/v1.0.19/draftling-m5stack_papermono-korean-partition-table.bin",
-                  "offset": "0x8000"
-                },
-                {
-                  "path": "firmware/v1.0.19/draftling-m5stack_papermono-korean.bin",
-                  "offset": "0x10000"
-                }
-              ]
-            },
-            {
-              "id": "japanese",
-              "name": "Japanese (English + Japanese romaji/kana/kanji)",
-              "description": "Romaji become hiragana; Space converts to kanji, candidates in the status bar. Typing guide: https://github.com/clackups/draftling/blob/main/docs/language-packs.md",
-              "parts": [
-                {
-                  "path": "firmware/v1.0.19/draftling-m5stack_papermono-japanese-bootloader.bin",
-                  "offset": "0x0"
-                },
-                {
-                  "path": "firmware/v1.0.19/draftling-m5stack_papermono-japanese-partition-table.bin",
-                  "offset": "0x8000"
-                },
-                {
-                  "path": "firmware/v1.0.19/draftling-m5stack_papermono-japanese.bin",
-                  "offset": "0x10000"
-                }
-              ]
-            },
-            {
-              "id": "chinese",
-              "name": "Chinese (English + Simplified Chinese pinyin)",
-              "description": "Type pinyin; pick hanzi with Space or 1-9 from the status bar. Typing guide: https://github.com/clackups/draftling/blob/main/docs/language-packs.md",
-              "parts": [
-                {
-                  "path": "firmware/v1.0.19/draftling-m5stack_papermono-chinese-bootloader.bin",
-                  "offset": "0x0"
-                },
-                {
-                  "path": "firmware/v1.0.19/draftling-m5stack_papermono-chinese-partition-table.bin",
-                  "offset": "0x8000"
-                },
-                {
-                  "path": "firmware/v1.0.19/draftling-m5stack_papermono-chinese.bin",
-                  "offset": "0x10000"
-                }
-              ]
             }
           ]
         }
