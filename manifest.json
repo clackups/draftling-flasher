@@ -817,22 +817,22 @@
       "chipFamily": "ESP32-S3",
       "releases": [
         {
-          "tag": "v1.0.19-papermono-ble2",
+          "tag": "v1.0.19-papermono-caps",
           "flashMode": "dio",
           "flashFreq": "80m",
           "flashSize": "16MB",
           "defaultPackName": "Default (English, Ukrainian, German, French, Hebrew)",
           "parts": [
             {
-              "path": "firmware/v1.0.19-papermono-ble2/draftling-m5stack_papermono-bootloader.bin",
+              "path": "firmware/v1.0.19-papermono-caps/draftling-m5stack_papermono-bootloader.bin",
               "offset": "0x0"
             },
             {
-              "path": "firmware/v1.0.19-papermono-ble2/draftling-m5stack_papermono-partition-table.bin",
+              "path": "firmware/v1.0.19-papermono-caps/draftling-m5stack_papermono-partition-table.bin",
               "offset": "0x8000"
             },
             {
-              "path": "firmware/v1.0.19-papermono-ble2/draftling-m5stack_papermono.bin",
+              "path": "firmware/v1.0.19-papermono-caps/draftling-m5stack_papermono.bin",
               "offset": "0x10000"
             }
           ]
