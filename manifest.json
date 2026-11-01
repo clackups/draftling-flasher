@@ -1324,6 +1324,31 @@
       "chipFamily": "ESP32-S3",
       "releases": [
         {
+          "tag": "v1.0.21-sticky-power",
+          "flashMode": "dio",
+          "flashFreq": "80m",
+          "flashSize": "32MB",
+          "defaultPackName": "Default (English, Ukrainian, German, French, Hebrew)",
+          "parts": [
+            {
+              "path": "firmware/v1.0.21-sticky-power/draftling-seeed_reterminal_sticky-bootloader.bin",
+              "offset": "0x0"
+            },
+            {
+              "path": "firmware/v1.0.21-sticky-power/draftling-seeed_reterminal_sticky-partition-table.bin",
+              "offset": "0x8000"
+            },
+            {
+              "path": "firmware/v1.0.21-sticky-power/draftling-seeed_reterminal_sticky-otadata.bin",
+              "offset": "0xd000"
+            },
+            {
+              "path": "firmware/v1.0.21-sticky-power/draftling-seeed_reterminal_sticky.bin",
+              "offset": "0x10000"
+            }
+          ]
+        },
+        {
           "tag": "v1.0.21",
           "flashMode": "dio",
           "flashFreq": "80m",
