@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Draftling for Linux</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Draftling for Linux</h1>
+    <p class="tagline">
+      The <a href="https://draftling.art/" target="_blank" rel="noopener">Draftling</a>
+      editor as a program for a Linux computer: a Wayland or X11 window,
+      the computer's own keyboard and mouse, every language.
+    </p>
+    <p class="header-links">
+      <a href="index.html">Install firmware on a Draftling device</a>
+      &middot; <a href="https://draftling.art/git-sync.html" target="_blank" rel="noopener">How to set up Git synchronization</a>
+    </p>
+  </header>
+
+  <main>
+    <section class="step">
+      <h2>Which package?</h2>
+      <ul>
+        <li>
+          <strong>Debian package</strong> -- for Debian 12, Ubuntu 22.04 and
+          later, and distributions based on them (Linux Mint, Raspberry Pi OS,
+          ...). It can also set the screen brightness, show the battery level
+          and connect to WiFi networks through NetworkManager.
+        </li>
+        <li>
+          <strong>Flatpak</strong> -- for any distribution with
+          <a href="https://flatpak.org/setup/" target="_blank" rel="noopener">Flatpak</a>
+          (Fedora, Arch, openSUSE, Ubuntu, ...), on 64-bit PCs and 64-bit ARM
+          computers. It runs in a sandbox: it uses the computer's network
+          connection as it is (no WiFi menu), and has no brightness setting
+          and no battery indicator.
+        </li>
+      </ul>
+    </section>
+
+    <section class="step">
+      <h2><span class="step-num">1</span> Debian package (Draftling 1.0.33)</h2>
+      <p class="hint">
+        Pick the package for your computer's processor
+        (<code>dpkg --print-architecture</code> prints <code>amd64</code>,
+        <code>arm64</code> or <code>armhf</code>).
+      </p>
+      <ul class="download-list">
+        <li>
+          <a class="download-link" href="firmware/v1.0.33/draftling_1.0.33_amd64.deb" download>Download for amd64</a>
+          <span class="download-file">draftling_1.0.33_amd64.deb</span>
+          <p class="hint">64-bit Intel and AMD PCs and laptops.</p>
+        </li>
+        <li>
+          <a class="download-link" href="firmware/v1.0.33/draftling_1.0.33_arm64.deb" download>Download for arm64</a>
+          <span class="download-file">draftling_1.0.33_arm64.deb</span>
+          <p class="hint">64-bit ARM computers: Raspberry Pi 3 / 4 / 5 with a 64-bit OS, other ARM single-board computers and laptops.</p>
+        </li>
+        <li>
+          <a class="download-link" href="firmware/v1.0.33/draftling_1.0.33_armhf.deb" download>Download for armhf</a>
+          <span class="download-file">draftling_1.0.33_armhf.deb</span>
+          <p class="hint">32-bit ARM computers (ARMv7 with hardware floating point): Raspberry Pi 2 / 3 / 4 with a 32-bit OS, older ARM single-board computers.</p>
+        </li>
+      </ul>
+      <p>Install it from the folder you saved it to, then start Draftling
+        from the application menu or with <code>draftling</code> in a terminal:</p>
+      <pre>sudo apt install ./draftling_1.0.33_amd64.deb
+draftling</pre>
+      <p class="hint">
+        Your documents are kept in <code>~/.local/share/draftling</code>, the
+        settings in <code>~/.config/draftling</code>. A newer package installs
+        over the old one the same way; <code>sudo apt remove draftling</code>
+        uninstalls it and leaves your documents in place.
+      </p>
+    </section>
+
+    <section class="step">
+      <h2><span class="step-num">2</span> Flatpak (Draftling 1.0.33)</h2>
+      <p class="hint">
+        Needs Flatpak with the Flathub repository set up
+        (<a href="https://flatpak.org/setup/" target="_blank" rel="noopener">instructions for each distribution</a>).
+        Pick the bundle for your processor (<code>uname -m</code> prints
+        <code>x86_64</code> or <code>aarch64</code>).
+      </p>
+      <ul class="download-list">
+        <li>
+          <a class="download-link" href="firmware/v1.0.33/draftling_1.0.33_x86_64.flatpak" download>Download for x86_64</a>
+          <span class="download-file">draftling_1.0.33_x86_64.flatpak</span>
+          <p class="hint">64-bit Intel and AMD PCs and laptops.</p>
+        </li>
+        <li>
+          <a class="download-link" href="firmware/v1.0.33/draftling_1.0.33_aarch64.flatpak" download>Download for aarch64</a>
+          <span class="download-file">draftling_1.0.33_aarch64.flatpak</span>
+          <p class="hint">64-bit ARM computers: Raspberry Pi 4 / 5 with a 64-bit OS, other ARM single-board computers and laptops. (32-bit ARM: use the Debian package.)</p>
+        </li>
+      </ul>
+      <p>Install it from the folder you saved it to (Flatpak downloads the
+        Freedesktop runtime it needs from Flathub the first time), then start
+        Draftling from the application menu or from a terminal:</p>
+      <pre>flatpak install --user ./draftling_1.0.33_x86_64.flatpak
+flatpak run art.draftling.Draftling</pre>
+      <p class="hint">
+        Your documents are kept in
+        <code>~/.var/app/art.draftling.Draftling/data/draftling</code>, the
+        settings in <code>~/.var/app/art.draftling.Draftling/config/draftling</code>.
+        To install a newer bundle, run the same <code>flatpak install</code>
+        command with its file name. <code>flatpak uninstall --user
+        art.draftling.Draftling</code> removes the program; add
+        <code>--delete-data</code> to remove your documents and settings as well.
+      </p>
+    </section>
+
+    <section class="step">
+      <h2><span class="step-num">3</span> Getting started</h2>
+      <ul>
+        <li>Draftling starts with the list of projects: a project is a folder of
+          documents that is synchronized with its own Git repository.</li>
+        <li><strong>F1</strong> opens the menu (settings, sync, keyboard layouts),
+          <strong>F10</strong> the help page with every keyboard shortcut.</li>
+        <li><a href="https://draftling.art/git-sync.html" target="_blank" rel="noopener">Set up Git sync</a>
+          to keep your writing backed up in a private repository, and to move it
+          between the computer and a Draftling device.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>
+      <a href="https://draftling.art/" target="_blank" rel="noopener">Draftling home</a>
+      &middot; <a href="https://github.com/clackups/draftling/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Changelog</a>
+      &middot; <a href="https://github.com/clackups/draftling/blob/main/linux/README.md" target="_blank" rel="noopener">Linux program documentation</a>
+      &middot; <a href="https://github.com/clackups/draftling" target="_blank" rel="noopener">Source &amp; docs</a>
+    </p>
+  </footer>
+</body>
+</html>
